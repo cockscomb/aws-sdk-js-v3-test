@@ -1,0 +1,22 @@
+{
+  "name": "aws-sdk-js-v3-test",
+  "version": "1.0.0",
+  "description": "Test project of AWS SDK v3",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cockscomb/aws-sdk-js-v3-test.git"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb-v2-node": "0.1.0-preview.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.4"
+  }
+}
