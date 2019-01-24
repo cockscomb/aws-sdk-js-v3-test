@@ -67,6 +67,6 @@ describe('DynamoDBClient', () => {
             },
         });
         const result = await dynamoDB.send(getItem);
-        expect(result.Item!.Title.S).toEqual('これはitem2。')
+        expect(result.Item!.Title.S).toEqual('これはitem2。');
     });
 });
