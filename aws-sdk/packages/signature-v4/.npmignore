@@ -1,0 +1,9 @@
+/src/
+/coverage/
+/suite/
+/scripts/
+tsconfig.test.json
+
+*.spec.js
+*.spec.d.ts
+*.spec.js.map

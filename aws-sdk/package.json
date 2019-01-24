@@ -1,0 +1,52 @@
+{
+  "name": "aws-sdk-js-v3",
+  "private": true,
+  "version": "0.0.1",
+  "description": "AWS SDK for JavaScript from the future",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "npm run clear-build-cache && lerna clean",
+    "clear-build-cache": "rimraf ./packages/*/build/*",
+    "copy-models": "node ./scripts/copyModels.js",
+    "pretest": "lerna run pretest",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aws/aws-sdk-js-v3.git"
+  },
+  "author": "aws-javascript-sdk-team@amazon.com",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "rimraf": "^2.6.2",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "lerna": "2.11.0",
+    "typescript": "^3.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "jest": {
+    "mapCoverage": true,
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/packages/add-glacier-checksum-headers-browser",
+      "<rootDir>/packages/client-.*"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/packages/add-glacier-checksum-headers-browser",
+      "<rootDir>/packages/crypto-sjcl-*",
+      "<rootDir>/packages/xml-body-parser/vendor/",
+      "<rootDir>/packages/client-.*",
+      "/__fixtures__/"
+    ]
+  }
+}
